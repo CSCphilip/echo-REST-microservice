@@ -4,6 +4,7 @@ RUN mkdir /build
 WORKDIR /build
 
 RUN export GO111MODULE=on
+RUN go mod init example/echo-REST-microservice
 RUN go install github.com/CSCphilip/echo-REST-microservice/main@latest
 RUN cd /build && git clone https://github.com/CSCphilip/echo-REST-microservice.git
 
