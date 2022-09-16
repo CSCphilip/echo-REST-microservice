@@ -21,6 +21,8 @@ func postEcho(c *gin.Context) {
 }
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
+	
 	router := gin.Default()
 	router.POST("/echo", postEcho)
 
