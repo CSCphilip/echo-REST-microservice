@@ -24,5 +24,5 @@ func main() {
 	router := gin.Default()
 	router.POST("/echo", postEcho)
 
-	router.Run("localhost:8000")
+	router.Run(":8000")
 }
