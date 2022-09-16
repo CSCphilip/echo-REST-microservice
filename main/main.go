@@ -22,7 +22,6 @@ func postEcho(c *gin.Context) {
 }
 
 func main() {
-	fmt.Printf("TEST")
 	router := gin.Default()
 	router.POST("/echo", postEcho)
 
