@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
     "net/http"
     "github.com/gin-gonic/gin"
 )
@@ -22,7 +21,6 @@ func postEcho(c *gin.Context) {
 }
 
 func main() {
-	fmt.Println("TEST")
 	router := gin.Default()
 	router.POST("/echo", postEcho)
 
