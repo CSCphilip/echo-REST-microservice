@@ -5,7 +5,7 @@ WORKDIR /build
 
 RUN export GO111MODULE=on
 RUN go mod init example/echo-REST-microservice
-RUN go get github.com/CSCphilip/echo-REST-microservice/main@latest
+RUN go get github.com/CSCphilip/echo-REST-microservice/code@latest
 
 ADD https://api.github.com/repos/CSCphilip/echo-REST-microservice/git/refs/heads/main version.json
 RUN git clone -b main https://github.com/CSCphilip/echo-REST-microservice.git
