@@ -6,14 +6,14 @@ import (
 )
 
 type echo struct {
-	Message string `json:"message"`
+	Message string `json:"message" binding:"required"`
 }
 
 func postEcho(c *gin.Context) {
 	var echoMessage echo
-	
+
 	if err := c.BindJSON(&echoMessage); err != nil {
-        c.JSON(http.StatusBadRequest, gin.H{"err":"Something went wrong.", "code":400})
+        c.JSON(http.StatusBadRequest, gin.H{"err":"Invalid format", "code":400})
 		return
     }
 
